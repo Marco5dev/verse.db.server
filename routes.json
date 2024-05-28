@@ -1,0 +1,492 @@
+{
+  "info": {
+    "_postman_id": "36f836be-6c40-4656-b2c6-5eadd88a233f",
+    "name": "API Routes Collection",
+    "description": "Collection of API routes for various resources",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "35292810"
+  },
+  "item": [
+    {
+      "name": "Posts",
+      "item": [
+        {
+          "name": "Get all posts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5050/api/posts",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "path": ["api", "posts"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Post to posts",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/posts",
+              "path": ["api", "posts"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get a single post by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/posts/:id",
+              "path": ["api", "posts", ":id"],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete a single post by ID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/posts/:id",
+              "path": ["api", "posts", ":id"],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Comments",
+      "item": [
+        {
+          "name": "Get all comments for a post",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/posts/:id/comments",
+              "path": ["api", "posts", ":id", "comments"],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get a single comment by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/posts/:id/comments/:commentId",
+              "path": ["api", "posts", ":id", "comments", ":commentId"],
+              "variable": [
+                {
+                  "key": "id"
+                },
+                {
+                  "key": "commentId"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Edit a comment",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/posts/:id/comments/:commentId/edit",
+              "path": ["api", "posts", ":id", "comments", ":commentId", "edit"],
+              "variable": [
+                {
+                  "key": "id"
+                },
+                {
+                  "key": "commentId"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete a comment",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/posts/:id/comments/:commentId/delete",
+              "path": [
+                "api",
+                "posts",
+                ":id",
+                "comments",
+                ":commentId",
+                "delete"
+              ],
+              "variable": [
+                {
+                  "key": "id"
+                },
+                {
+                  "key": "commentId"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create a new comment",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/posts/:id/comments",
+              "path": ["api", "posts", ":id", "comments"],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Get all users",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/users",
+              "path": ["api", "users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get a single user by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/users/:id",
+              "path": ["api", "users", ":id"],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all posts by a user",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/users/:id/posts",
+              "path": ["api", "users", ":id", "posts"],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all comments by a user",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/users/:id/comments",
+              "path": ["api", "users", ":id", "comments"],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "Get all categories",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/categories",
+              "path": ["api", "categories"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get a single category by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/categories/:id",
+              "path": ["api", "categories", ":id"],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all posts in a category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/categories/:id/posts",
+              "path": ["api", "categories", ":id", "posts"],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tags",
+      "item": [
+        {
+          "name": "Get all tags",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/tags",
+              "path": ["api", "tags"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get a single tag by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/tags/:id",
+              "path": ["api", "tags", ":id"],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all posts with a tag",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/tags/:id/posts",
+              "path": ["api", "tags", ":id", "posts"],
+              "variable": [
+                {
+                  "key": "id"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "item": [
+        {
+          "name": "Search for posts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/search",
+              "path": ["api", "search"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login to the API",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/auth/login",
+              "path": ["api", "auth", "login"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Register a new user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/auth/register",
+              "path": ["api", "auth", "register"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Logout from the API",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/auth/logout",
+              "path": ["api", "auth", "logout"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get the current user",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "5050",
+              "raw": "http://localhost:5050/api/auth/me",
+              "path": ["api", "auth", "me"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

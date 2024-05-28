@@ -1,0 +1,8 @@
+{
+  "BlogDB": {
+    "adapter": "json",
+    "dataPath": "./Data",
+    "devLogs": { "enable": true, "path": "./Logs" },
+    "secure": { "enable": false }
+  }
+}
